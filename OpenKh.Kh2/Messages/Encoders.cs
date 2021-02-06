@@ -22,6 +22,15 @@ namespace OpenKh.Kh2.Messages
             public List<MessageCommandModel> Decode(byte[] data) => _decode.Decode(data);
             public byte[] Encode(List<MessageCommandModel> messageCommands) => _encode.Encode(messageCommands);
         }
+		
+		internal class GreekSystemEncoder : IMessageEncoder
+        {
+            private readonly IMessageDecode _decode = new GreekSystemDecode();
+            private readonly IMessageEncode _encode = new GreekSystemEncode();
+
+            public List<MessageCommandModel> Decode(byte[] data) => _decode.Decode(data);
+            public byte[] Encode(List<MessageCommandModel> messageCommands) => _encode.Encode(messageCommands);
+        }
 
         internal class JapaneseSystemEncoder : IMessageEncoder
         {
