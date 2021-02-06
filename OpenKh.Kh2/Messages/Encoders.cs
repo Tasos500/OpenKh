@@ -45,6 +45,8 @@ namespace OpenKh.Kh2.Messages
             new InternationalSystemEncoder();
         public static IMessageEncoder TurkishSystem { get; } =
             new TurkishSystemEncoder();
+		public static IMessageEncoder GreekSystem { get; } =
+            new TurkishSystemEncoder();
         public static IMessageEncoder JapaneseSystem { get; } =
             new JapaneseSystemEncoder();
         public static IMessageEncoder JapaneseEvent { get; } =

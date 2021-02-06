@@ -62,6 +62,34 @@ namespace OpenKh.Engine.Extensions
                 FontHeight = Constants.FontEuropeanEventHeight,
                 TableHeight = Constants.FontTableEventHeight,
             };
+		
+		public static RenderingMessageContext ToKh2ELSystemTextContext(this FontContext fontContext) =>
+            new RenderingMessageContext
+            {
+                Font = fontContext.ImageSystem,
+                Font2 = fontContext.ImageSystem2,
+                Icon = fontContext.ImageIcon,
+                FontSpacing = fontContext.SpacingSystem,
+                IconSpacing = fontContext.SpacingIcon,
+                Encoder = Encoders.GreekSystem,
+                FontWidth = Constants.FontEuropeanSystemWidth,
+                FontHeight = Constants.FontEuropeanSystemHeight,
+                TableHeight = Constants.FontTableSystemHeight,
+            };
+
+        public static RenderingMessageContext ToKh2ELEventTextContext(this FontContext fontContext) =>
+            new RenderingMessageContext
+            {
+                Font = fontContext.ImageEvent,
+                Font2 = fontContext.ImageEvent2,
+                Icon = fontContext.ImageIcon,
+                FontSpacing = fontContext.SpacingEvent,
+                IconSpacing = fontContext.SpacingIcon,
+                Encoder = Encoders.GreekSystem,
+                FontWidth = Constants.FontEuropeanEventWidth,
+                FontHeight = Constants.FontEuropeanEventHeight,
+                TableHeight = Constants.FontTableEventHeight,
+            };
 
         public static RenderingMessageContext ToKh2JpSystemTextContext(this FontContext fontContext) =>
             new RenderingMessageContext

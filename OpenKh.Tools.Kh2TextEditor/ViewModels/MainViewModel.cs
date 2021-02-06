@@ -386,6 +386,20 @@ namespace OpenKh.Tools.Kh2TextEditor.ViewModels
                             break;
                     }
                     break;
+				case EncodingType.Greek:
+                    switch (FontType)
+                    {
+                        case FontType.System:
+                            context = _fontContext.ToKh2ELSystemTextContext();
+                            break;
+                        case FontType.Event:
+                            context = _fontContext.ToKh2ELEventTextContext();
+                            break;
+                        default:
+                            context = null;
+                            break;
+                    }
+                    break;
                 default:
                     context = null;
                     break;

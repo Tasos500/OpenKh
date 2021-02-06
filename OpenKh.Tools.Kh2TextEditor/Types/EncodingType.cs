@@ -4,6 +4,7 @@ namespace OpenKh.Tools.Kh2TextEditor.Types
     {
         European,
         Japanese,
-        Turkish
+        Turkish,
+		Greek
     }
 }

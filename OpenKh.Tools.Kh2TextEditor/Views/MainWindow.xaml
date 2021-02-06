@@ -78,6 +78,10 @@
                             IsChecked="{Binding Path=EncodingType, Mode=TwoWay, 
                             Converter={StaticResource enumConverter},
                             ConverterParameter=Turkish}"/>
+					<RadioButton Content="EL Encoder"
+                            IsChecked="{Binding Path=EncodingType, Mode=TwoWay, 
+                            Converter={StaticResource enumConverter},
+                            ConverterParameter=Greek}"/>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="_Help">
