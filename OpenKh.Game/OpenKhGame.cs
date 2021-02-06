@@ -110,6 +110,8 @@ namespace OpenKh.Game
                 PreferredBackBufferHeight = (int)Math.Round(resolutionHeight * Config.ResolutionBoost),
                 IsFullScreen = Config.IsFullScreen,
             };
+            Window.AllowUserResizing = true;
+            Window.Title = "OpenKH Game Engine";
 
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
