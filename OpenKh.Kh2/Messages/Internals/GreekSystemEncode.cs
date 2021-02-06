@@ -5,21 +5,21 @@ using System.Linq;
 
 namespace OpenKh.Kh2.Messages.Internals
 {
-    internal class TurkishSystemEncode : IMessageEncode
+    internal class GreekSystemEncode : IMessageEncode
     {
         private static readonly Dictionary<MessageCommand, KeyValuePair<byte, BaseCmdModel>> _tableCommands =
-            TurkishSystemDecode._table
+            GreekSystemDecode._table
             .Where(x => x.Value != null && x.Value.Command != MessageCommand.PrintText)
             .GroupBy(x => x.Value.Command)
             .ToDictionary(x => x.Key, x => x.First());
 
         private static readonly Dictionary<char, byte> _tableCharacters =
-            TurkishSystemDecode._table
+            GreekSystemDecode._table
             .Where(x => x.Value?.Command == MessageCommand.PrintText)
             .ToDictionary(x => x.Value.Text[0], x => x.Key);
 
         private static readonly Dictionary<string, byte> _tableComplex =
-            TurkishSystemDecode._table
+            GreekSystemDecode._table
             .Where(x => x.Value?.Command == MessageCommand.PrintComplex)
             .ToDictionary(x => x.Value.Text, x => x.Key);
 
